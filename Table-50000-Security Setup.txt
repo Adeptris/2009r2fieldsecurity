@@ -1,0 +1,53 @@
+OBJECT Table 50000 Security Setup
+{
+  OBJECT-PROPERTIES
+  {
+    Date=16/12/12;
+    Time=17:31:42;
+    Modified=Yes;
+    Version List=SMM1.00;
+  }
+  PROPERTIES
+  {
+    CaptionML=[ENU=Security Setup;
+               ENG=Security Setup];
+  }
+  FIELDS
+  {
+    { 1   ;   ;Primary Key         ;Code10        ;CaptionML=[ENU=Primary Key;
+                                                              ENG=Primary Key] }
+    { 2   ;   ;Template Nos.       ;Code10        ;TableRelation="No. Series";
+                                                   CaptionML=[ENU=Template Nos.;
+                                                              ENG=Template Nos.] }
+    { 3   ;   ;Profile Nos.        ;Code10        ;TableRelation="No. Series";
+                                                   CaptionML=[ENU=Profile Nos.;
+                                                              ENG=Profile Nos.] }
+    { 5   ;   ;Code Version        ;Code10        ;InitValue=SMM1.00;
+                                                   CaptionML=[ENU=Code Version;
+                                                              ENG=Code Version];
+                                                   NotBlank=Yes }
+    { 6   ;   ;Increment on Export ;Boolean        }
+    { 10  ;   ;File Path           ;Text200       ;OnValidate=BEGIN
+                                                                IF "File Path" <> '' THEN
+                                                                  IF COPYSTR("File Path",STRLEN("File Path") ) <> '\' THEN
+                                                                    "File Path" := "File Path" + '\';
+                                                              END;
+
+                                                   CaptionML=[ENU=File Path;
+                                                              ENG=File Path] }
+  }
+  KEYS
+  {
+    {    ;Primary Key                             ;Clustered=Yes }
+  }
+  FIELDGROUPS
+  {
+  }
+  CODE
+  {
+
+    BEGIN
+    END.
+  }
+}
+
