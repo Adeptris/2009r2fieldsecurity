@@ -1,4 +1,4 @@
-2009r2fieldsecurity
+Dynamics NAV 2009 Field Level Security
 ===================
 
 Dynamics NAV Field Level Security
