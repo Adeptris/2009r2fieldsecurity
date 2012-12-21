@@ -1,4 +1,4 @@
-2009r2fieldsecurity
+Dynamics NAV Field Level Security
 ===================
 
 Dynamics NAV Field Level Security
@@ -6,7 +6,7 @@ Dynamics NAV Field Level Security
 Project to create a set of tables, forms, pages and codeunits to have field (control) level security ...
 These controls are text box, checkbox, menu button, subform, image box etc:
 
-Starting with version 2009 R2
+Starting with version 2009 Branch
 
-Process:
-Export the page or form in Type-ID.txt as text from the Object Browser, Import the object into a template, this will find all the controls that can be managed, Remove any controls that do not need object level control, Merge the code into the object as text that can be imported into the object designer, Create any number of profiles that have control conditions,  Add users to the profiles and test   
+Note:
+Select the branch for the version you are wanting to work with, some functions are different and version specific, please no not mix files from different branches
